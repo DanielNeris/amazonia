@@ -4815,7 +4815,8 @@ footer.main-footer.fixed-footer {
 	z-index:1;
 }
 .dark-footer {
-	background:#2C3B5A;
+	/* background:#2C3B5A; */
+	background: rgba(37, 53, 38, 0.85);
 }
 .footer-widget h3 {
 	font-size:17px;
@@ -4830,7 +4831,8 @@ footer.main-footer.fixed-footer {
 }
 .sub-footer {
 	margin-top:40px;
-	background:#24324F;
+	/* background:#24324F; */
+	background: rgba(37, 53, 38, 1.85);
 	padding:28px 0;
 }
 .copyright {
