@@ -50,7 +50,8 @@ body{
 	font-size: 13px;
 	height:100%;
 	text-align:center;
-	background:#2F3B59;
+	/* background:#2F3B59; */
+	background-color: rgba(37, 53, 38, 0.85);
 	color:#000;
 	font-family: 'Quicksand', sans-serif;
 }
@@ -4804,7 +4805,7 @@ footer.main-footer {
 	float:left;
 	width:100%;
 	position:relative;
-	padding:90px 0 0 0;
+	padding:0;
 	z-index:50;
 	overflow: hidden;
 }
@@ -4833,10 +4834,10 @@ footer.main-footer.fixed-footer {
 	padding-bottom:25px;
 }
 .sub-footer {
-	margin-top:40px;
 	/* background:#24324F; */
 	background: rgba(37, 53, 38, 1.85);
 	padding:28px 0;
+	line-height: 2.5;
 }
 .copyright {
 	display:inline-block;
