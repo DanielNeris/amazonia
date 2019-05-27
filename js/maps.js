@@ -203,8 +203,8 @@
             lat: $('#singleMap').data('latitude'),
         };
         var single_map = new google.maps.Map(document.getElementById('singleMap'), {
-            zoom: 14,
-            center: myLatLng,
+            zoom: 7,
+            center: new google.maps.LatLng(-4.731519, -64.675020),
             scrollwheel: false,
             zoomControl: false,
             mapTypeControl: false,
@@ -222,9 +222,28 @@
         });
         var markerIcon2 = {
             url: 'images/marker.png',
-        }		
+        }
+
+        var locations2 = 
+        [
+            [-4.731519, -64.675020],
+            [-3.642723, -63.880579],
+            [-3.970159, -65.198814],
+            [-4.769850, -63.681936],
+            [-6.816665, -64.672993],
+        ];
+
+        for (var i = 0; i < locations2.length; i++) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations2[i][0], locations2[i][1]),
+                map: single_map,
+                icon: markerIcon2,
+                title: 'Our Location'
+            });
+        }
+
         var marker = new google.maps.Marker({
-            position: myLatLng,
+            position: new google.maps.LatLng(-4.731519, -64.675020),
             map: single_map,
             icon: markerIcon2,
             title: 'Our Location'
