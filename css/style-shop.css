@@ -1,0 +1,44 @@
+.woocommerce-ordering {
+    float: right;
+}
+.woocommerce-result-count{
+    float: left;
+}
+
+.woocommerce-listing .listing-item{
+    width: 33%;
+}
+
+@media only screen and (max-width: 992px){
+    .woocommerce-listing .listing-item{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .woocommerce-listing .listing-item{
+        width: 100%;
+    }
+}
+
+.woocommerce-listing .listing-item a {
+    color: #fff;
+    float: none;
+}
+
+.woocommerce-category-location{
+    padding: 8px 0 25px 0;
+}
+
+.woocommerce-listing .btn.circle-btn{
+    border-radius: 6px;
+} 
+
+.woocommerce-listing .btn.circle-btn::before{
+    border: none;
+}
+
+.woocommerce-listing .price{
+    padding: 0;
+    margin: 10px 0;
+}
