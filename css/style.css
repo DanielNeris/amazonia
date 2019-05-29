@@ -6949,7 +6949,15 @@ header.main-header {
 .video-box iframe{
 	width: 500px;
 }
-768px
+
+.text-box p {
+	font-size: 100%;
+}
+
+.text-box-custom{
+	margin-top: -80px;
+}
+
 @media only screen and (max-width: 576px){
 	.video-box iframe{
 		width: 350px;
@@ -6959,5 +6967,14 @@ header.main-header {
 @media only screen and (max-width: 1200px){
 	.video-box iframe{
 		width: 400px;
+	}
+	.text-box-custom{
+		margin-top: -150px;
+	}
+}
+
+@media only screen and (max-width: 1063px){
+	.text-box-custom{
+		margin-top: -0px;
 	}
 }
