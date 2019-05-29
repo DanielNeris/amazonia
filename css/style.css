@@ -6945,3 +6945,19 @@ header.main-header {
 		display: block;
 	}
 }
+
+.video-box iframe{
+	width: 500px;
+}
+768px
+@media only screen and (max-width: 576px){
+	.video-box iframe{
+		width: 350px;
+	}
+}
+
+@media only screen and (max-width: 1200px){
+	.video-box iframe{
+		width: 400px;
+	}
+}
