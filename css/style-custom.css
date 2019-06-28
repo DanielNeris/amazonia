@@ -1,0 +1,10 @@
+.user-profile-avatar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-avatar img{ 
+    width: 125px;
+    height: auto;
+}
