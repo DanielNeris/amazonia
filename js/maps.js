@@ -10,11 +10,10 @@
             return ('<div class="map-popup-wrap"><div class="map-popup"><div class="infoBox-close"><i class="fa fa-times"></i></div><div class="map-popup-category">' + locationCategory + '</div><a href="' + locationURL + '" class="listing-img-content fl-wrap"><img src="' + locationImg + '" alt=""></a> <div class="listing-content fl-wrap"><div class="card-popup-raining map-card-rainting" data-staRrating="' + locationStarRating + '"><span class="map-popup-reviews-count">( ' + locationRevievsCounter + ' reviews )</span></div><div class="listing-title fl-wrap"><h4><a href=' + locationURL + '>' + locationTitle + '</a></h4><span class="map-popup-location-info"><i class="fa fa-map-marker"></i>' + locationAddress + '</span><span class="map-popup-location-phone"><i class="fa fa-phone"></i>' + locationPhone + '</span></div></div></div></div>')
         }
         var locations = [
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Reserva', "Lorem Ipsum, AM ", "+999999999", "5", "27"), -4.731519, -64.675020, 0, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Reserva', "Lorem Ipsum, AM ", "+999999999", "4", "10"), -3.642723, -63.880579, 1, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Reserva', "Lorem Ipsum, AM ", "+999999999", "3", "20"), -3.970159, -65.198814, 2, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Reserva', "Lorem Ipsum, AM ", "+999999999", "4", "5"), -4.769850, -63.681936, 3, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Reserva', "Lorem Ipsum, AM ", "+999999999", "4", "97"), -6.816665, -64.672993, 3, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Live On Solutions', "Lorem Ipsum, AM ", "+999999999", "5", "27"), -4.731519, -64.675020, 0, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Renata Beokovic', "Lorem Ipsum, AM ", "+999999999", "5", "10"), -3.642723, -63.880579, 1, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Icameup', "Lorem Ipsum, AM ", "+999999999", "5", "20"), -3.970159, -65.198814, 2, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Brasileira', "Lorem Ipsum, AM ", "+999999999", "5", "5"), -4.769850, -63.681936, 3, markerIcon],
         ];
 
         var map = new google.maps.Map(document.getElementById('map-main'), {
