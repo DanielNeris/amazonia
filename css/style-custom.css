@@ -8,3 +8,18 @@
     width: 125px;
     height: auto;
 }
+
+.shapes-bg-big:before {
+    background-image: url(../images/home-influencers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.user-profile-avatar {
+    box-shadow: 0px 0px 0px 7px rgba(255,255,255,0.6);
+}
+
+.content .color-bg {
+    background: #000;
+}
