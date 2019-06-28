@@ -1,25 +1,32 @@
 (function ($) {
     "use strict";
-    var markerIcon = {
+    const markerIcon = {
         anchor: new google.maps.Point(22, 16),
         url: 'images/marker.png',
     }
 
+    const locationsLatLon = [
+        [-4.731519, -64.675020],
+        [-3.642723, -63.880579],
+        [-3.970159, -65.198814],
+        [-4.769850, -63.6819]
+    ]
+
     function mainMap() {
-        function locationData(locationURL, locationCategory, locationImg, locationTitle, locationAddress, locationPhone, locationStarRating, locationRevievsCounter) {
-            return ('<div class="map-popup-wrap"><div class="map-popup"><div class="infoBox-close"><i class="fa fa-times"></i></div><div class="map-popup-category">' + locationCategory + '</div><a href="' + locationURL + '" class="listing-img-content fl-wrap"><img src="' + locationImg + '" alt=""></a> <div class="listing-content fl-wrap"><div class="card-popup-raining map-card-rainting" data-staRrating="' + locationStarRating + '"><span class="map-popup-reviews-count">( ' + locationRevievsCounter + ' reviews )</span></div><div class="listing-title fl-wrap"><h4><a href=' + locationURL + '>' + locationTitle + '</a></h4><span class="map-popup-location-info"><i class="fa fa-map-marker"></i>' + locationAddress + '</span><span class="map-popup-location-phone"><i class="fa fa-phone"></i>' + locationPhone + '</span></div></div></div></div>')
+        function locationData(locationURL, locationCategory, locationImg, locationTitle, locationAddress, locationPhone) {
+            return ('<div class="map-popup-wrap"><div class="map-popup"><div class="infoBox-close"><i class="fa fa-times"></i></div><div class="map-popup-category">' + locationCategory + '</div><a href="' + locationURL + '" target="_blank" class="listing-img-content fl-wrap"><img src="' + locationImg + '" alt=""></a> <div class="listing-content fl-wrap"><div class="listing-title fl-wrap"><h4><a href=' + locationURL + '>' + locationTitle + '</a></h4><span class="map-popup-location-info"><i class="fa fa-map-marker"></i>' + locationAddress + '</span><span class="map-popup-location-phone"><i class="fa fa-phone"></i>' + locationPhone + '</span></div></div></div></div>')
         }
         var locations = [
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Live On Solutions', "Lorem Ipsum, AM ", "+999999999", "5", "27"), -4.731519, -64.675020, 0, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Renata Beokovic', "Lorem Ipsum, AM ", "+999999999", "5", "10"), -3.642723, -63.880579, 1, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Icameup', "Lorem Ipsum, AM ", "+999999999", "5", "20"), -3.970159, -65.198814, 2, markerIcon],
-            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Brasileira', "Lorem Ipsum, AM ", "+999999999", "5", "5"), -4.769850, -63.681936, 3, markerIcon],
+            [locationData('https://www.liveonsolutions.com', 'Startup', 'images/all/1.jpg', 'Live On Solutions', "Jaú - SP, Rua Treze de Maio, 675", "+55 11 97608-6949 "), locationsLatLon[0][0], locationsLatLon[0][1], 0, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Renata Beokovic', "Lorem Ipsum, AM ", "+999999999"), locationsLatLon[1][0], locationsLatLon[1][1], 1, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Icameup', "Lorem Ipsum, AM ", "+999999999"), locationsLatLon[2][0], locationsLatLon[2][1], 2, markerIcon],
+            [locationData('#', 'Lorem Ipsum', 'images/all/1.jpg', 'Agência Brasileira', "Lorem Ipsum, AM ", "+999999999"), locationsLatLon[3][0], locationsLatLon[3][1], 3, markerIcon],
         ];
 
         var map = new google.maps.Map(document.getElementById('map-main'), {
             zoom: 7,
             scrollwheel: false,
-            center: new google.maps.LatLng(-4.731519, -64.675020),
+            center: new google.maps.LatLng(locationsLatLon[0][0], locationsLatLon[0][1]),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             zoomControl: false,
             mapTypeControl: false,
@@ -203,7 +210,7 @@
         };
         var single_map = new google.maps.Map(document.getElementById('singleMap'), {
             zoom: 7,
-            center: new google.maps.LatLng(-4.731519, -64.675020),
+            center: new google.maps.LatLng(locationsLatLon[0][0], locationsLatLon[0][1]),
             scrollwheel: false,
             zoomControl: false,
             mapTypeControl: false,
@@ -225,11 +232,10 @@
 
         var locations2 = 
         [
-            [-4.731519, -64.675020],
-            [-3.642723, -63.880579],
-            [-3.970159, -65.198814],
-            [-4.769850, -63.681936],
-            [-6.816665, -64.672993],
+            [locationsLatLon[0][0], locationsLatLon[0][1]],
+            [locationsLatLon[1][0], locationsLatLon[1][1]],
+            [locationsLatLon[2][0], locationsLatLon[2][1]],
+            [locationsLatLon[3][0], locationsLatLon[3][1]],
         ];
 
         for (var i = 0; i < locations2.length; i++) {
@@ -242,7 +248,7 @@
         }
 
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-4.731519, -64.675020),
+            position: new google.maps.LatLng(locationsLatLon[0][0], locationsLatLon[0][1]),
             map: single_map,
             icon: markerIcon2,
             title: 'Our Location'
